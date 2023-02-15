@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>練習一</title>
+</head>
+
+<body>
+
+    字符串1：<input type="text" id="string1" value=""/><br/>
+    字符串2：<input type="text" id="string2" value=""/><br/>
+    
+<script>
+    var text1;
+    var text2;
+    function storeNumber(){
+     text1 = document.getElementById("string1").value;
+    
+     text2 = document.getElementById("string2").value;
+
+    }
+    // merge('text1', 'text2')
+
+    function merge(x, y){
+        var longer;
+        var all = "";
+        var array1 = [...x];
+        var array2 = [...y];
+
+        if(array1.length > array2.length)  // 找出較長的字串
+        { longer = array1.length;}
+        else
+        { longer = array2.length;}
+
+        for(var i=0; i<longer; i++)
+        {   
+            if(i < array1.length)
+            {all += array1[i];}
+            if(i < array2.length)
+            {all += array2[i];}
+        
+        }
+
+        document.getElementById("demo").innerHTML = all;
+        return all;
+    }
+   
+</script>  
+
+<input type="button" value="合併" onclick=" storeNumber(); merge(text1, text2)">
+<p id="demo"></p>
+
+</body>
+</html>
