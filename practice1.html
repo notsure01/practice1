@@ -14,12 +14,11 @@
     var text1;
     var text2;
     function storeString(){
+        
      text1 = document.getElementById("string1").value;
-    
      text2 = document.getElementById("string2").value;
 
     }
-    // merge('text1', 'text2')
 
     function merge(x, y){
         var longer;
@@ -48,7 +47,9 @@
 </script>  
 
 <input type="button" value="合併" onclick=" storeString(); merge(text1, text2)">
+
 <p id="demo"></p>
+
 
 </body>
 </html>
